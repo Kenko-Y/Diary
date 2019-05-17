@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// オブジェクト指向のクラスメソッド
+// クラス名::メソッド
+// オブジェクト -> メソッド
+
+// get('URLリクエスト','対象コントローラ@対象メソッド')
+    Route::get('/','DiaryController@index')->name('diary.index');   // 追加
+    Route::get('/diary/create','DiaryController@create')->name('diary.create');   // 追加
